@@ -1,2 +1,0 @@
-# jackdelong
-jackdelong.com

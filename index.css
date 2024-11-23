@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+}
+
+@layer components {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .coin-face {
+    @apply w-full h-full absolute rounded-full backface-hidden;
+  }
+  
+  .coin-front {
+    @apply bg-gradient-to-br from-white to-gray-200;
+    transform: rotateX(0deg);
+  }
+  
+  .coin-back {
+    @apply bg-gradient-to-br from-gray-800 to-gray-900;
+    transform: rotateX(180deg);
+  }
+
+  .hexagram-line {
+    @apply h-1.5 bg-white rounded-full transition-all duration-300;
+  }
+}
